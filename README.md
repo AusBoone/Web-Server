@@ -33,7 +33,7 @@ The server also returns a simple HTML document in the message body indicating th
 
 File Attributes - Access is needed to the file attributes for the various files retrieved by your server. The stat() function is used and provided in the Standard C library in the header file sys/stat.h.
 
-Parsing and Printing Dates - The Standard C library provides a number of functions for working with dates. The following functions were be useful:
+Parsing and Printing Dates - The Standard C library provides a number of functions for working with dates. The following functions were useful:
 
 strftime()    strptime()    gmtime()
 
