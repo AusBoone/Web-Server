@@ -12,11 +12,11 @@ When sending responses, the server includes the following options (where appropr
 
 Content Types - This server is able to handle a number of different file types. Thus, it is able to determine the type of file from the extension. The server uses the following content types for the indicated file extensions:
 
-text/html      .html
-image/gif      .gif
-image/jpeg     .jpeg
-image/jpeg     .jpg
-text/plain     all others
+- text/html      .html
+- image/gif      .gif
+- image/jpeg     .jpeg
+- image/jpeg     .jpg
+- text/plain     all others
 
 Root Directory - A “root” web directory was created within the folder in which your source file is stored and use that directory for extracting files. The path name stored in the URL in the GET or POST request begins with the name of the root directory. In addition, if the URL ends with a slash, then it is required to append the file name index.html to the end of the URL.
 
@@ -24,10 +24,10 @@ Security - If you are not careful when running your web server, you will give th
 
 Errors - The only error responses handled are the following:
 
-200    OK
-304    Not Modified
-400    Bad Request
-404    Not Found
+- 200    OK
+- 304    Not Modified
+- 400    Bad Request
+- 404    Not Found
 
 The server also returns a simple HTML document in the message body indicating the particular error for all errors other than 304. Note, the returned document is not extracted from the file system, but instead hard coded within the program.
 
@@ -35,8 +35,12 @@ File Attributes - Access is needed to the file attributes for the various files 
 
 Parsing and Printing Dates - The Standard C library provides a number of functions for working with dates. The following functions were useful:
 
-strftime()    strptime()    gmtime()
+- strftime()
+- strptime()
+- gmtime()
 
 String Processing - This program involves a large amount of string processing. As you know, working with strings in C can be challenging. The server utilizes  a split function that can be used to split a string into one or more parts based on a given delimiter.
 
-Program Structure - Server design is well structured program and uses a Makefile to build the program. The program is well commented. The executable is named httpd. When the program is built, all that is required should be to enter 'make httpd' and when the program is ran, you should be able to enter 'httpd' and assume the use of socket number 30000.
+Program Structure - Server design is well structured program and uses a Makefile to build the program. The program is well commented. 
+
+The executable is named httpd. When the program is built, all that is required should be to enter 'make httpd' and when the program is ran, you should be able to enter 'httpd' and assume the use of socket number 30000.
